@@ -80,6 +80,12 @@
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnRotate = new Guna.UI2.WinForms.Guna2Button();
+            this.grpScaling = new System.Windows.Forms.GroupBox();
+            this.lblSx = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.numSy = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnScale = new Guna.UI2.WinForms.Guna2Button();
+            this.lblSy = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.numSx = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox1.SuspendLayout();
             this.grpAlgorithms.SuspendLayout();
             this.grpFillColor.SuspendLayout();
@@ -91,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.grpTranslation.SuspendLayout();
             this.Rotation.SuspendLayout();
+            this.grpScaling.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMainTitle
@@ -414,7 +421,7 @@
             this.grpHowToUse.Controls.Add(this.lblInstructions);
             this.grpHowToUse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpHowToUse.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.grpHowToUse.Location = new System.Drawing.Point(12, 627);
+            this.grpHowToUse.Location = new System.Drawing.Point(8, 751);
             this.grpHowToUse.Name = "grpHowToUse";
             this.grpHowToUse.Size = new System.Drawing.Size(545, 142);
             this.grpHowToUse.TabIndex = 6;
@@ -479,7 +486,7 @@
             this.groupBox3.Controls.Add(this.lblVertexLegend);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupBox3.Location = new System.Drawing.Point(563, 629);
+            this.groupBox3.Location = new System.Drawing.Point(559, 753);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(245, 140);
             this.groupBox3.TabIndex = 6;
@@ -566,7 +573,7 @@
             this.grpExtraTools.Controls.Add(this.btnShowVertices);
             this.grpExtraTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpExtraTools.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.grpExtraTools.Location = new System.Drawing.Point(814, 629);
+            this.grpExtraTools.Location = new System.Drawing.Point(810, 753);
             this.grpExtraTools.Name = "grpExtraTools";
             this.grpExtraTools.Size = new System.Drawing.Size(325, 140);
             this.grpExtraTools.TabIndex = 17;
@@ -869,11 +876,108 @@
             this.btnRotate.Text = "Rotation";
             this.btnRotate.Click += new System.EventHandler(this.btnRotate_Click);
             // 
+            // grpScaling
+            // 
+            this.grpScaling.Controls.Add(this.numSx);
+            this.grpScaling.Controls.Add(this.lblSy);
+            this.grpScaling.Controls.Add(this.lblSx);
+            this.grpScaling.Controls.Add(this.numSy);
+            this.grpScaling.Controls.Add(this.btnScale);
+            this.grpScaling.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpScaling.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.grpScaling.Location = new System.Drawing.Point(677, 582);
+            this.grpScaling.Name = "grpScaling";
+            this.grpScaling.Size = new System.Drawing.Size(438, 153);
+            this.grpScaling.TabIndex = 24;
+            this.grpScaling.TabStop = false;
+            this.grpScaling.Text = "Scaling";
+            // 
+            // lblSx
+            // 
+            this.lblSx.AutoSize = false;
+            this.lblSx.BackColor = System.Drawing.Color.Transparent;
+            this.lblSx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSx.ForeColor = System.Drawing.Color.Black;
+            this.lblSx.Location = new System.Drawing.Point(12, 20);
+            this.lblSx.Name = "lblSx";
+            this.lblSx.Size = new System.Drawing.Size(33, 27);
+            this.lblSx.TabIndex = 17;
+            this.lblSx.Text = "sx:";
+            // 
+            // numSy
+            // 
+            this.numSy.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numSy.DefaultText = "";
+            this.numSy.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.numSy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.numSy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.numSy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.numSy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.numSy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numSy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.numSy.Location = new System.Drawing.Point(47, 55);
+            this.numSy.Name = "numSy";
+            this.numSy.PlaceholderText = "";
+            this.numSy.SelectedText = "";
+            this.numSy.Size = new System.Drawing.Size(200, 27);
+            this.numSy.TabIndex = 21;
+            // 
+            // btnScale
+            // 
+            this.btnScale.Animated = true;
+            this.btnScale.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnScale.BorderRadius = 6;
+            this.btnScale.BorderThickness = 2;
+            this.btnScale.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnScale.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnScale.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnScale.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnScale.FillColor = System.Drawing.Color.White;
+            this.btnScale.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnScale.ForeColor = System.Drawing.Color.Black;
+            this.btnScale.Location = new System.Drawing.Point(259, 22);
+            this.btnScale.Name = "btnScale";
+            this.btnScale.Size = new System.Drawing.Size(173, 47);
+            this.btnScale.TabIndex = 18;
+            this.btnScale.Text = "Scale";
+            this.btnScale.Click += new System.EventHandler(this.btnScale_Click);
+            // 
+            // lblSy
+            // 
+            this.lblSy.AutoSize = false;
+            this.lblSy.BackColor = System.Drawing.Color.Transparent;
+            this.lblSy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSy.ForeColor = System.Drawing.Color.Black;
+            this.lblSy.Location = new System.Drawing.Point(12, 53);
+            this.lblSy.Name = "lblSy";
+            this.lblSy.Size = new System.Drawing.Size(33, 27);
+            this.lblSy.TabIndex = 22;
+            this.lblSy.Text = "sy:";
+            // 
+            // numSx
+            // 
+            this.numSx.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numSx.DefaultText = "";
+            this.numSx.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.numSx.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.numSx.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.numSx.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.numSx.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.numSx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numSx.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.numSx.Location = new System.Drawing.Point(47, 22);
+            this.numSx.Name = "numSx";
+            this.numSx.PlaceholderText = "";
+            this.numSx.SelectedText = "";
+            this.numSx.Size = new System.Drawing.Size(200, 27);
+            this.numSx.TabIndex = 23;
+            // 
             // frmPolygonFilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1142, 771);
+            this.ClientSize = new System.Drawing.Size(1142, 905);
+            this.Controls.Add(this.grpScaling);
             this.Controls.Add(this.Rotation);
             this.Controls.Add(this.grpTranslation);
             this.Controls.Add(this.grpExtraTools);
@@ -906,6 +1010,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
             this.grpTranslation.ResumeLayout(false);
             this.Rotation.ResumeLayout(false);
+            this.grpScaling.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -963,6 +1068,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btnRotate;
+        private System.Windows.Forms.GroupBox grpScaling;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblSx;
+        private Guna.UI2.WinForms.Guna2TextBox numSy;
+        private Guna.UI2.WinForms.Guna2Button btnScale;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblSy;
+        private Guna.UI2.WinForms.Guna2TextBox numSx;
     }
 }
 
